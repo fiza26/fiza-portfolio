@@ -1,0 +1,354 @@
+* {
+    font-family: "Pixelify Sans", serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #1e272e;
+    overflow-y: auto;
+    overflow-x: hidden;
+    transition: 1s ease-in-out;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    padding: 15px;
+    color: white;
+    z-index: 10;
+    backdrop-filter: blur(30.5px);
+    -webkit-backdrop-filter: blur(30.5px);
+}
+
+nav span {
+    position: relative;
+    margin-left: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+    border-bottom: 0px solid white;
+    z-index: 1;
+}
+
+nav span::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: linear-gradient(90deg, #00d2ff 0%, #3a47d5 100%);
+    transition: width 0.3s ease;
+    z-index: -1;
+}
+
+nav span:hover::after {
+    height: 10px;
+    width: 100%;
+}
+
+nav span a {
+    color: white;
+    text-decoration: none;
+    margin-left: 0;
+}
+
+.circle {
+    background: linear-gradient(90deg, #f8ff00 0%, #3ad59f 100%);
+    width: 250px;
+    height: 250px;
+    border-radius: 100%;
+    position: absolute;
+    animation: move 2s infinite;
+}
+
+.circle-two {
+    background: linear-gradient(90deg, #efd5ff 0%, #515ada 100%);
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+    position: absolute;
+    left: 150px;
+    animation: move-two 1s infinite;
+}
+
+.circle-three {
+    background: linear-gradient(90deg, #d53369 0%, #daae51 100%);
+    width: 230px;
+    height: 230px;
+    border-radius: 100%;
+    position: absolute;
+    left: 600px;
+    animation: move-three 3s infinite;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    color: white;
+    width: 100%;
+}
+
+.section {
+    display: flex;
+    align-items: center;
+    padding: 50px;
+    height: 100vh;
+    backdrop-filter: blur(30.5px);
+    -webkit-backdrop-filter: blur(30.5px);
+    overflow: hidden;
+}
+
+.section a {
+    color: white;
+    margin-left: 10px;
+}
+
+.section .container .about {
+    width: 570px;
+}
+
+.section .container .about h1 {
+    position: relative;
+    cursor: pointer;
+}
+
+.section .container .about h1::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60%;
+    height: 15px;
+    background: linear-gradient(90deg, #00d2ff 0%, #3a47d5 100%);
+    transition: height 0.1s ease;
+    z-index: -1;
+}
+
+.section .container .about h1:hover::after {
+    height: 35px;
+}
+
+.section .container .about p {
+    margin-top: 15px;
+    font-size: 22px;
+}
+
+.section .container .button button {
+    margin-top: 20px;
+    border: none;
+    width: 150px;
+    height: 40px;
+    border-radius: 50px;
+    background: linear-gradient(90deg, #00d2ff 0%, #3a47d5 100%);
+    color: white;
+    cursor: pointer;
+}
+
+.section .container .image img {
+    width: 300px;
+    border-radius: 100%;
+}
+
+.section .container .tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 15px;
+}
+
+.section .container .tech-stack img {
+    height: 50px;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+.project-section {
+    display: flex;
+    align-items: center;
+    padding: 50px;
+    backdrop-filter: blur(30.5px);
+    -webkit-backdrop-filter: blur(30.5px);
+    overflow: hidden;
+    margin-top: 30px;
+}
+
+.project-section .container h1 {
+    position: relative;
+    cursor: pointer;
+    margin-top: 50px;
+}
+
+.project-section .container h1::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 15px;
+    background: linear-gradient(90deg, #00d2ff 0%, #3a47d5 100%);
+    transition: height 0.1s ease;
+    z-index: -1;
+}
+
+.project-section .container h1:hover:after {
+    height: 35px;
+}
+
+.project-section .container .projects {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.project-section .container .projects .project-img {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    margin-bottom: 35px;
+    border: 1px solid #3a47d5;
+    padding: 15px;
+    border-radius: 15px;
+    max-width: 350px;
+}
+
+.project-section .container .projects .project-img .project-description {
+    margin-top: 10px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.project-section .container .projects .project-img .project-button {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.project-section .container .projects .project-img .project-button button {
+    margin-top: 10px;
+    border: none;
+    width: 130px;
+    height: 30px;
+    border-radius: 15px;
+    background: linear-gradient(90deg, #00d2ff 0%, #3a47d5 100%);
+    color: white;
+    cursor: pointer;
+}
+
+.project-section .container .projects .project-img .project-button button i {
+    margin-right: 10px;
+}
+
+.project-section .container .projects .project-img img {
+    border-radius: 15px;
+    transition: 0.30s ease-in-out;
+}
+
+.project-section .container .projects .project-img img:hover {
+    transform: scale(1.050);
+}
+
+@keyframes move {
+    from {
+        left: -270px;
+    }
+
+    to {
+        left: 1500px;
+    }
+}
+
+@keyframes move-two {
+    from {
+        left: 150px;
+        top: -200px;
+    }
+
+    to {
+        top: 650px;
+    }
+}
+
+@keyframes move-three {
+    from {
+        left: 600px;
+        top: -250px;
+    }
+
+    to {
+        left: 300px;
+        top: 650px;
+    }
+}
+
+@media (max-width: 1024px) {
+
+    .circle {
+        display: none;
+    }
+}
+
+@media (max-width: 720px) {
+
+    .circle,
+    .circle-two,
+    .circle-three {
+        display: none;
+    }
+
+    .section .container {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .section .container .about {
+        width: 100%;
+        max-width: 500px;
+    }
+
+    .section .container .about p {
+        font-size: 15px;
+    }
+
+    .section .container .image img {
+        width: 150px;
+        margin-bottom: 15px;
+    }
+
+    .mobile {
+        display: none;
+    }
+
+    .section .container .tech-stack {
+        margin-bottom: 20px;
+    }
+
+    .section .container .tech-stack img {
+        height: 30px;
+    }
+
+    .project-section .container .projects .project-img {
+        max-width: 100%;
+    }
+
+    .project-section .container .projects .project-img img {
+        max-width: 100%;
+    }
+
+    .project-section .container .projects .project-img .project-button a {
+        display: block;
+        width: 100%;
+    }
+
+    .project-section .container .projects .project-img .project-button button {
+        width: 100%;
+    }
+}
