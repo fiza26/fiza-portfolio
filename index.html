@@ -33,7 +33,7 @@
                     i'm
                     exploring front-end development with dedication and a strong will to learn.</p>
                 <div class="button">
-                    <button>Let's Begin</button>
+                    <a href="#about"><button>Let's Begin</button></a>
                 </div>
             </div>
             <div class="image">
@@ -83,7 +83,8 @@
                     <div class="project-button">
                         <a href="https://social-food-web.netlify.app/"><button><i
                                     class="fa-solid fa-arrow-trend-up"></i> Visit</button></a>
-                        <button><i class="fa-brands fa-github"></i> GitHub</button>
+                        <a href="https://github.com/fiza26/social-food"><button><i class="fa-brands fa-github"></i>
+                                GitHub</button></a>
                     </div>
                 </div>
                 <div class="project-img">
@@ -94,7 +95,8 @@
                     <div class="project-button">
                         <a href="https://e-commerce-vue-app.netlify.app/"><button><i
                                     class="fa-solid fa-arrow-trend-up"></i> Visit</button></a>
-                        <button><i class="fa-brands fa-github"></i> GitHub</button>
+                        <a href="https://github.com/fiza26/e-commerce"><button><i class="fa-brands fa-github"></i>
+                                GitHub</button></a>
                     </div>
                 </div>
                 <div class="project-img">
@@ -106,7 +108,8 @@
                     <div class="project-button">
                         <a href="https://kepribadianku-app.netlify.app/"><button><i
                                     class="fa-solid fa-arrow-trend-up"></i> Visit</button></a>
-                        <button><i class="fa-brands fa-github"></i> GitHub</button>
+                        <a href="https://github.com/fiza26/kepribadianku-app"><button><i
+                                    class="fa-brands fa-github"></i> GitHub</button></a>
                     </div>
                 </div>
                 <div class="project-img">
@@ -118,7 +121,8 @@
                     <div class="project-button">
                         <a href="https://nice-memory-game.netlify.app/"><button><i
                                     class="fa-solid fa-arrow-trend-up"></i> Visit</button></a>
-                        <button><i class="fa-brands fa-github"></i> GitHub</button>
+                        <a href="https://github.com/fiza26/memory-game"><button><i class="fa-brands fa-github"></i>
+                                GitHub</button></a>
                     </div>
                 </div>
                 <div class="project-img">
@@ -143,7 +147,8 @@
                     <div class="project-button">
                         <a href="https://best-quiz-app-vue.netlify.app/"><button><i
                                     class="fa-solid fa-arrow-trend-up"></i> Visit</button></a>
-                        <button><i class="fa-brands fa-github"></i> GitHub</button>
+                        <a href="https://github.com/fiza26/quiz-app"><button><i class="fa-brands fa-github"></i>
+                                GitHub</button></a>
                     </div>
                 </div>
                 <div class="project-img">
@@ -154,7 +159,8 @@
                     <div class="project-button">
                         <a href="https://rps-game-vue.netlify.app/"><button><i class="fa-solid fa-arrow-trend-up"></i>
                                 Visit</button></a>
-                        <button><i class="fa-brands fa-github"></i> GitHub</button>
+                        <a href="https://github.com/fiza26/rockPaperScissor"><button><i class="fa-brands fa-github"></i>
+                                GitHub</button></a>
                     </div>
                 </div>
                 <div class="project-img">
@@ -198,7 +204,8 @@
                     </div>
                     <div class="project-button">
                         <button><i class="fa-solid fa-arrow-trend-up"></i> Visit</button>
-                        <button><i class="fa-brands fa-github"></i> GitHub</button>
+                        <a href="https://github.com/fiza26/secret-talk"><button><i class="fa-brands fa-github"></i>
+                                GitHub</button></a>
                     </div>
                 </div>
                 <div class="project-img">
@@ -229,6 +236,20 @@
 
 <script>
     document.querySelectorAll('nav span a').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();  // Prevent the default link behavior
+
+            // Select the target section based on the href attribute of the clicked link
+            const targetId = this.getAttribute('href').substring(1); // Remove the '#' from href
+            const targetSection = document.getElementById(targetId);
+
+            // Scroll smoothly to the target section
+            targetSection.scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+    document.querySelectorAll('.section .container .about .button a').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();  // Prevent the default link behavior
 
