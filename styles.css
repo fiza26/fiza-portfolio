@@ -261,6 +261,14 @@ nav span a {
     transform: scale(1.050);
 }
 
+footer {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    bottom: 7px;
+    color: white;
+}
+
 @keyframes move {
     from {
         left: -270px;
